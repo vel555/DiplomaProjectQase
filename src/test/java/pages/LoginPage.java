@@ -6,11 +6,12 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
+
 public class LoginPage {
 
     @Step("Open Login Page")
     public void openLoginPage(){
-        open("https://app.qase.io/login");
+        open("/login");
     }
 
     @Step("Input login {login}")

@@ -1,8 +1,8 @@
-package pojos.project;
+package api.pojos.reqest.project;
 
-import groovy.transform.builder.Builder;
-import jdk.jfr.DataAmount;
+
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

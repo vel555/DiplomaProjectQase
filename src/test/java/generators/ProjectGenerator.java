@@ -1,7 +1,8 @@
 package generators;
 
 import com.github.javafaker.Faker;
-import pojos.project.CreateProjectRequest;
+import api.pojos.reqest.project.CreateProjectRequest;
+
 
 public class ProjectGenerator {
 
@@ -10,7 +11,7 @@ public class ProjectGenerator {
             public static CreateProjectRequest createProjectApi(){
         return CreateProjectRequest.builder()
                 .title(faker.name().firstName())
-                .code(faker.name().firstName())
+                .code(faker.name().firstName().toUpperCase())
                 .description(faker.chuckNorris().fact())
                 .access("all")
                 .build();

@@ -35,9 +35,10 @@ dependencies {
             "org.assertj:assertj-core:3.27.2"
 
     )
-    compileOnly 'org.projectlombok:lombok:1.18.34'
     implementation 'com.fasterxml.jackson.core:jackson-core:2.18.2'
     implementation 'com.github.javafaker:javafaker:1.0.2'
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
 
 }
 

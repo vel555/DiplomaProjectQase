@@ -2,10 +2,10 @@ package api;
 
 import generators.ProjectGenerator;
 import org.junit.jupiter.api.Test;
-import pojos.project.CreateProjectRequest;
-import pojos.project.response.project.CreateResponseProject;
-import pojos.project.response.project.Result;
-import steps.ProjectSteps;
+import api.pojos.reqest.project.CreateProjectRequest;
+import api.pojos.response.project.CreateProjectResponse;
+import api.pojos.response.project.Result;
+import api.steps.ProjectSteps;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -14,11 +14,11 @@ public class ProjectApiTest {
     @Test
     void projectShouldBeCreated(){
         CreateProjectRequest createProjectRq = ProjectGenerator.createProjectApi();
-        CreateResponseProject createRsProject = ProjectSteps.createResponseProject(CreateProjectRequest);
+        CreateProjectResponse createProjectRs = ProjectSteps.createProject(createProjectRq);
 
-        assertThat(createRsProject)
+        assertThat(createProjectRs)
                 .isNotNull()
-                .extracting(CreateResponseProject::getResult)
+                .extracting(CreateProjectResponse::getResult)
                 .extracting(Result::getCode)
                 .isEqualTo(createProjectRq.getCode());
     }

@@ -1,4 +1,4 @@
-package apiSpecs;
+package api.apiSpecs;
 
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
@@ -15,7 +15,7 @@ public class Specs {
             .basePath("/v1")
             .log().uri()
             .contentType(JSON)
-            .header("Token","");
+            .header("Token","20f86833ab3793949b88f04a067c0ec368f0cf235a4977d51d5af279720fd55f");
 
     public static final ResponseSpecification RES_SPEC = new ResponseSpecBuilder()
             .log(LogDetail.ALL)

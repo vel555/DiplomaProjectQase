@@ -1,8 +1,8 @@
-package tests;
+package ui.tests;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
-import pages.LoginPage;
+import ui.pages.LoginPage;
 
 public class LoginTest extends BaseTest {
 

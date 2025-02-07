@@ -20,7 +20,7 @@ out/
 .apt_generated
 .classpath
 .factorypath
-.api.pojos.reqest.project
+.tests.api.pojos.reqest.project
 .settings
 .springBeans
 .sts4-cache

@@ -1,7 +1,7 @@
-package ui.pages;
+package tests.ui.pages;
 
 import static com.codeborne.selenide.Selenide.open;
-import static ui.pages.elements.Input.setValueInput;
+import static tests.ui.pages.elements.Input.setValueInput;
 
 public class ProjectPage {
 
@@ -11,6 +11,9 @@ public class ProjectPage {
 
     public void clickCreateNewProjectButton(){
         clickButton("Create new project");
+    }
+
+    private void clickButton(String createNewProject) {
     }
 
     public void create(){

@@ -1,13 +1,14 @@
-package api;
+package tests.api;
 
 import generators.ProjectGenerator;
 import org.junit.jupiter.api.Test;
-import api.pojos.reqest.project.CreateProjectRequest;
-import api.pojos.response.project.CreateProjectResponse;
-import api.pojos.response.project.Result;
-import api.steps.ProjectSteps;
+import tests.api.pojos.reqest.project.CreateProjectRequest;
+import tests.api.pojos.response.project.CreateProjectResponse;
+import tests.api.pojos.response.project.Result;
+import tests.api.steps.ProjectSteps;
 
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
+
 
 public class ProjectApiTest {
 

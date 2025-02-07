@@ -1,4 +1,4 @@
-package api.pojos.reqest.project;
+package tests.api.pojos.reqest.project;
 
 
 import lombok.AllArgsConstructor;

@@ -1,7 +1,7 @@
 package generators;
 
 import com.github.javafaker.Faker;
-import api.pojos.reqest.project.CreateProjectRequest;
+import tests.api.pojos.reqest.project.CreateProjectRequest;
 
 
 public class ProjectGenerator {

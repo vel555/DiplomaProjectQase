@@ -1,4 +1,4 @@
-package ui.tests;
+package tests.ui;
 
 public class ProjectTest {
 }

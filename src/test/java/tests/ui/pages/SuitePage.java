@@ -1,4 +1,4 @@
-package ui.pages;
+package tests.ui.pages;
 
 public class SuitePage {
 }

@@ -1,4 +1,4 @@
-package ui.pages.elements;
+package tests.ui.pages.elements;
 
 import static com.codeborne.selenide.Selenide.$x;
 

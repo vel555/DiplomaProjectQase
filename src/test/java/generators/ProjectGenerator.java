@@ -2,6 +2,7 @@ package generators;
 
 import com.github.javafaker.Faker;
 import tests.api.pojos.reqest.project.CreateProjectRequest;
+import tests.api.steps.ProjectSteps;
 
 
 public class ProjectGenerator {
@@ -17,4 +18,9 @@ public class ProjectGenerator {
                 .build();
 
             }
+
+    public static void deleteProjectApi(String code){
+        ProjectSteps.deleteProject(code);
+    }
 }
+

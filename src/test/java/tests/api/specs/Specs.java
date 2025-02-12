@@ -1,4 +1,4 @@
-package tests.api.apiSpecs;
+package tests.api.specs;
 
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
@@ -11,7 +11,7 @@ import static org.apache.http.HttpStatus.SC_OK;
 
 public class Specs {
     public static final RequestSpecification REQ_SPEC = with()
-            .baseUri("https://app.qase.io")
+            .baseUri("https://api.qase.io")
             .basePath("/v1")
             .log().uri()
             .contentType(JSON)

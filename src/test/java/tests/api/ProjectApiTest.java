@@ -22,5 +22,7 @@ public class ProjectApiTest {
                 .extracting(CreateProjectResponse::getResult)
                 .extracting(Result::getCode)
                 .isEqualTo(createProjectRq.getCode());
+
+        ProjectGenerator.deleteProjectApi(createProjectRq.getCode());
     }
 }

@@ -1,4 +1,4 @@
-package tests.api.pojos.response.project;
+package tests.api.pojos.response.suite;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,8 +7,9 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
-public class Result {
-    public String code;
+@AllArgsConstructor
+public class Result{
+    private int id;
 }
+

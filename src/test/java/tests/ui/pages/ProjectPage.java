@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static tests.ui.pages.elements.Input.setValueInput;
 
-public class ProjectPage extends ui.pages.BasePage {
+public class ProjectPage extends BasePage {
 
     private final SelenideElement PROJECT_NAME_INPUT = $("#project-name");
     private final SelenideElement PROJECT_CODE_INPUT = $("#project-code");

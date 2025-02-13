@@ -27,7 +27,7 @@ import static com.codeborne.selenide.Selenide.*;
    // public void headerTextOnSuccessfulLogin(){
       //  $("h1[class=uA6zAY]").shouldHave(text("Projects"));
     //}
-   public class LoginPage extends ui.pages.BasePage {
+   public class LoginPage extends BasePage {
     private final SelenideElement LOGIN_INPUT = $("[name=email]");
     private final SelenideElement PASSWORD_INPUT = $("[name=password]");
     private final SelenideElement SIGN_IN_BUTTON = $("span[class=CAunhU]");

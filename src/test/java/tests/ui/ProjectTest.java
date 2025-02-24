@@ -1,4 +1,40 @@
 package tests.ui;
 
-public class ProjectTest {
+import generators.ProjectGenerator;
+import io.qameta.allure.Story;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import tests.BaseTest;
+import tests.api.pojos.reqest.project.CreateProjectRequest;
+import tests.api.steps.ProjectSteps;
+
+import static generators.ProjectGenerator.createProjectApi;
+import static tests.api.steps.LoginSteps.authInApp;
+
+public class ProjectTest extends BaseTest {
+
+    @Test
+    @Story("Create a project")
+    @DisplayName("Creation of Project with valid data")
+    public void createProjectTest() {
+        projectPage.openProjectPage();
+        projectPage.clickCreateNewProjectButton();
+        CreateProjectRequest project = createProjectApi();
+        projectPage.create();
+        projectPage.projectPageIsOpened();
+        ProjectGenerator.deleteProjectApi(project.getCode());
+    }
+
+    @Test
+    @DisplayName("Deletion of the Project")
+    public void DeleteProjectTest() {
+        ProjectSteps.createProject(createProjectApi());
+        loginPage.openLoginPage();
+        authInApp(login, password);
+        projectPage.openProjectPage();
+        projectPage.clicDots();
+        projectPage.deleteButton();
+        projectPage.deleteProject();
+        projectPage.assertThatProjectDeleted();
+    }
 }

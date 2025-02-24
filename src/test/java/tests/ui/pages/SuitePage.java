@@ -7,6 +7,8 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.open;
 import static java.lang.String.format;
+import static tests.ui.pages.elements.Button.clickButton;
+import static tests.ui.pages.elements.Input.setValueInput;
 
 public class SuitePage extends BasePage {
 
@@ -23,13 +25,13 @@ public class SuitePage extends BasePage {
 
     public SuitePage deleteSuite(){
         REMOVE_SUITE_BUTTON.shouldBe(visible).click();
-        button.clickButton("Delete");
+        clickButton("Delete");
         return this;
     }
 
     public SuitePage create(CreateSuiteRequest suite){
 
-        input.setValueInInput("For example: Web Application", suite.getTitle());
+        setValueInput("For example: Web Application", suite.getTitle());
         $x(format(createSuiteInputs, "Description")).setValue(suite.getDescription());
         $x(format(createSuiteInputs, "Preconditions")).setValue(suite.getPreconditions());
         return clickCreateButton();
@@ -41,7 +43,7 @@ public class SuitePage extends BasePage {
     }
 
     public SuitePage clickCreateButton(){
-        button.clickButton("Create");
+        clickButton("Create");
         return this;
     }
 
@@ -51,7 +53,7 @@ public class SuitePage extends BasePage {
     }
 
     public SuitePage clickCreateNewSuiteButton(){
-        button.clickButton("Create new suite");
+        clickButton("Create new suite");
         return this;
     }
 }

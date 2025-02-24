@@ -1,10 +1,10 @@
 package tests.ui.pages;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static tests.ui.pages.elements.Input.setValueInput;
 
@@ -20,6 +20,8 @@ public class ProjectPage extends BasePage {
     private final SelenideElement PROJ_ERROR = $x("//div[text()='The code must be at least 2 characters.']");
     private final SelenideElement DELETE_BUTTON = $x("//div[@data-testid = 'remove']");
     private final SelenideElement DELETE_PROJECT_BUTTON = $x("//span[text() = 'Delete project']");
+    private final ElementsCollection DOTS_BUTTON = $$x("//span[@class = 'qc0jO1']");
+
 
     public void openProjectPage(){
         open("/projects");
@@ -60,6 +62,15 @@ public class ProjectPage extends BasePage {
     @Step("Click Delete project button")
     public void deleteProject() {
         DELETE_PROJECT_BUTTON.shouldBe(visible).click();
+    }
+    @Step("Assert that project deleted")
+    public void assertThatProjectDeleted() {
+        open("/projects");
+        PROJ_NAME.shouldBe(not(visible));
+    }
+    @Step("Click Dots")
+    public void clicDots() {
+        DOTS_BUTTON.get(5).click();
     }
 
 }

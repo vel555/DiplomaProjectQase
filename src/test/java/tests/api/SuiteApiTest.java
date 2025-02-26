@@ -5,9 +5,9 @@ import generators.SuiteGenerator;
 import org.junit.jupiter.api.*;
 import tests.api.pojos.reqest.project.CreateProjectRequest;
 import tests.api.pojos.reqest.suite.CreateSuiteRequest;
+import tests.api.pojos.response.project.Result;
 import tests.api.pojos.response.suite.CreateSuiteResponse;
 import tests.api.pojos.response.suite.DeleteSuiteResponse;
-import tests.api.pojos.response.suite.Result;
 import tests.api.steps.ProjectSteps;
 import tests.api.steps.SuiteSteps;
 
@@ -49,7 +49,7 @@ public class SuiteApiTest {
         assertThat(delSuiteRs)
                 .isNotNull()
                 .extracting(DeleteSuiteResponse::getResult)
-                .extracting(Result::getId)
+                .extracting(Result::getCode)
                 .isEqualTo(suiteRs.getResult().getId());
     }
 

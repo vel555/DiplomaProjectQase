@@ -16,7 +16,7 @@ public class BaseTest {
     protected LoginPage loginPage = new LoginPage();
     protected ProjectPage projectPage = new ProjectPage();
     protected SuitePage suitePage = new SuitePage();
-    protected   ProjectGenerator projectGenerator = new ProjectGenerator();
+    protected ProjectGenerator projectGenerator = new ProjectGenerator();
 
     @BeforeAll
     static void setUp() {
@@ -29,7 +29,7 @@ public class BaseTest {
     }
 
     @AfterEach
-    public void afterEach(){
+    public void afterEach() {
         closeWebDriver();
     }
 }

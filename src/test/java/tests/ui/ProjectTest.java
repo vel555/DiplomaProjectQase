@@ -17,11 +17,13 @@ public class ProjectTest extends BaseTest {
     @Story("Create a project")
     @DisplayName("Creation of Project with valid data")
     public void createProjectTest() {
+        authInApp("cpofo@mailto.plus","+375297106340");
         projectPage.openProjectPage();
         projectPage.clickCreateNewProjectButton();
         CreateProjectRequest project = createProjectApi();
-        projectPage.create();
+        projectPage.create(project);
         projectPage.projectPageIsOpened();
+
         ProjectGenerator.deleteProjectApi(project.getCode());
     }
 
@@ -30,7 +32,7 @@ public class ProjectTest extends BaseTest {
     public void DeleteProjectTest() {
         ProjectSteps.createProject(createProjectApi());
         loginPage.openLoginPage();
-        authInApp(login, password);
+        authInApp("cpofo@mailto.plus", "+375297106340");
         projectPage.openProjectPage();
         projectPage.clicDots();
         projectPage.deleteButton();

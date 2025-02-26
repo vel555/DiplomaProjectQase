@@ -31,11 +31,6 @@ import static com.codeborne.selenide.Selenide.*;
         PASSWORD_INPUT.sendKeys(password);
     }
 
-    @Step("Click submit")
-    public void clickSubmit() {
-        PASSWORD_INPUT.submit();
-    }
-
     @Step("Click sign in button")
     public void clickSignInButton() {
         SIGN_IN_BUTTON.click();

@@ -3,9 +3,11 @@ package tests.ui.pages;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
+import tests.api.pojos.reqest.project.CreateProjectRequest;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
+import static tests.ui.pages.elements.Button.clickButton;
 import static tests.ui.pages.elements.Input.setValueInput;
 
 public class ProjectPage extends BasePage {
@@ -31,10 +33,8 @@ public class ProjectPage extends BasePage {
         clickButton("Create new project");
     }
 
-    private void clickButton(String createNewProject) {
-    }
 
-    public void create(){
+    public void create(CreateProjectRequest project){
         setValueInput("For example:Web Application","project");
         setValueInput("For example:WA","DEMO");
         clickButton("Create new project");

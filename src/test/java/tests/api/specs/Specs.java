@@ -1,5 +1,6 @@
 package tests.api.specs;
 
+import helpers.CustomAllureListener;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.specification.RequestSpecification;
@@ -13,6 +14,7 @@ public class Specs {
     public static final RequestSpecification REQ_SPEC = with()
             .baseUri("https://api.qase.io")
             .basePath("/v1")
+            .filter(CustomAllureListener.withCustomTemplates())
             .log().uri()
             .contentType(JSON)
             .header("Token","20f86833ab3793949b88f04a067c0ec368f0cf235a4977d51d5af279720fd55f");

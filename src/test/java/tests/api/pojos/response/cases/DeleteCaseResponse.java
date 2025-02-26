@@ -1,4 +1,4 @@
-package tests.api.pojos.response.suite;
+package tests.api.pojos.response.cases;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,10 +7,11 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class CreateSuiteResponse{
-    private Result result;
-    private boolean status;
-}
+@NoArgsConstructor
+public class DeleteCaseResponse {
 
+    private boolean status;
+    public Result result;
+    private String errorMessage;
+}

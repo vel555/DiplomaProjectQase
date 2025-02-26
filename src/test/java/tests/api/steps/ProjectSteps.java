@@ -17,7 +17,7 @@ public class ProjectSteps {
         return given()
                 .spec(REQ_SPEC)
                 .body(projectRq)
-                .post("/project")
+                .post(path)
                 .then().spec(RES_SPEC)
                 .extract().as(CreateProjectResponse.class);
     }

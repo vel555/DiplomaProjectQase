@@ -6,6 +6,7 @@ import generators.ProjectGenerator;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import tests.ui.pages.CasePage;
 import tests.ui.pages.LoginPage;
 import tests.ui.pages.ProjectPage;
 import tests.ui.pages.SuitePage;
@@ -16,6 +17,7 @@ public class BaseTest {
     protected LoginPage loginPage = new LoginPage();
     protected ProjectPage projectPage = new ProjectPage();
     protected SuitePage suitePage = new SuitePage();
+    public CasePage casePage = new CasePage();
     protected ProjectGenerator projectGenerator = new ProjectGenerator();
 
     @BeforeAll

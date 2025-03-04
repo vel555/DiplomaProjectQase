@@ -1,6 +1,7 @@
 package tests.ui;
 
 import generators.ProjectGenerator;
+import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,7 @@ public class ProjectTest extends BaseTest {
 
     @Test
     @Story("Create a project")
+    @Owner("Valentin")
     @DisplayName("Creation of Project with valid data")
     public void createProjectTest() {
         authInApp("cpofo@mailto.plus","+375297106340");
@@ -28,6 +30,7 @@ public class ProjectTest extends BaseTest {
     }
 
     @Test
+    @Owner("Valentin")
     @DisplayName("Deletion of the Project")
     public void DeleteProjectTest() {
         ProjectSteps.createProject(createProjectApi());

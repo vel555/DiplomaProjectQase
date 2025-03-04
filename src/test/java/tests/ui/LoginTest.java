@@ -1,5 +1,6 @@
 package tests.ui;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.Owner;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -19,6 +20,7 @@ public class LoginTest extends BaseTest {
     LoginPage loginPage = new LoginPage();
 
     @Test
+    @Owner("Valentin")
     public void loginSuccessfulTest(){
         SelenideLogger.addListener("allure", new AllureSelenide());
         loginPage.openLoginPage();

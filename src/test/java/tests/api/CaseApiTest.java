@@ -2,6 +2,7 @@ package tests.api;
 
 import generators.CaseGenerator;
 import generators.ProjectGenerator;
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -18,6 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CaseApiTest {
 
     @Test
+    @Owner("Valentin")
     @DisplayName("Case should be created")
     void caseShouldBeCreated() {
         CreateProjectRequest projectRq = ProjectGenerator.createProjectApi();
@@ -35,6 +37,7 @@ public class CaseApiTest {
     }
 
     @Test
+    @Owner("Valentin")
     @DisplayName("Case should be deleted")
     void caseShouldBeDeleted(){
         CreateProjectRequest projectRq = ProjectGenerator.createProjectApi();

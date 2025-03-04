@@ -23,6 +23,7 @@ public class SuiteApiTest {
     public void precondition(){
         ProjectSteps.createProject(projectRq);
     }
+
     @Test
     @DisplayName("Create suite")
     public void suiteShouldBeCreated(){
